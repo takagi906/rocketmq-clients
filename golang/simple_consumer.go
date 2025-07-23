@@ -451,6 +451,6 @@ func (sc *defaultSimpleConsumer) Ack(ctx context.Context, messageView *MessageVi
 	return nil
 }
 
-func (sc *defaultSimpleConsumer) isEndpointUpdated() bool {
+func (sc *defaultSimpleConsumer) IsEndpointUpdated() bool {
 	return sc.cli.ReceiveReconnect
 }

@@ -455,6 +455,6 @@ func (p *defaultProducer) SetRequestTimeout(timeout time.Duration) {
 	p.pSetting.requestTimeout = p.cli.opts.timeout
 }
 
-func (p *defaultProducer) isEndpointUpdated() bool {
+func (p *defaultProducer) IsEndpointUpdated() bool {
 	return p.cli.ReceiveReconnect
 }
