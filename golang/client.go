@@ -50,6 +50,7 @@ type isClient interface {
 	wrapHeartbeatRequest() *v2.HeartbeatRequest
 	onRecoverOrphanedTransactionCommand(endpoints *v2.Endpoints, command *v2.RecoverOrphanedTransactionCommand) error
 	onVerifyMessageCommand(endpoints *v2.Endpoints, command *v2.VerifyMessageCommand) error
+	OnReconnectEndpointsCommand(endpoints *v2.Endpoints, command *v2.ReconnectEndpointsCommand) bool
 }
 type defaultClientSession struct {
 	endpoints        *v2.Endpoints
